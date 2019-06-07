@@ -2,13 +2,19 @@
 <html lang="en">
 <head>
 	<title>Admin Panel</title>
+
 </head>
+
 <body>
-	
-<form class="" action="{url 'index'}" method="post">
+{% block content %} 	
+<form class="" action="{url 'medium_crawl'}" method="post">
 	{% csrf_token%}
 	{{myregistrationform.as_p}}
+	{{crawled_data}}
+	<br><br><br>
 	<input type="submit" name="search">
+
 </form>
+{% endblock %}
 </body>
 </html>
